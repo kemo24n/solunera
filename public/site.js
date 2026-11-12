@@ -4,36 +4,60 @@
 
   /* ======================= CONTENT ======================= */
   var PROJECTS = [
-    { plate: 'shelf', tags: ['AI agent', 'Computer vision', 'Ordering', '15 branches'],
-      en: { t: 'Shelf-check AI agent', who: 'Grocery chain, 15 branches', d: 'Every shift starts with a camera walk down the aisles. The model recognises each product, marks what is on the shelf, and lists what is missing, so the online store never sells what isn’t there. It runs next to the accounting software each branch already uses.' },
-      ar: { t: 'وكيل ذكاء اصطناعي لجرد الرفوف', who: 'سلسلة سوبرماركت، ١٥ فرعاً', d: 'كل وردية تبدأ بجولة كاميرا بين الرفوف. النموذج يتعرّف على كل منتج، يعلّم الموجود ويطلع قائمة بالناقص، فالمتجر الأونلاين ما بيبيع شي مش موجود. يشتغل جنب برنامج المحاسبة الموجود بكل فرع.' } },
-    { plate: 'chat', tags: ['AI assistant', 'Delivery', 'Driver app', 'Points'],
-      en: { t: 'Food guide with an AI assistant', who: 'Delivery and recommendation service', d: 'One app with four faces: customers, staff, drivers and the owner. Customers ask the assistant where to eat and it answers the way the brand’s own team does, then they order and collect points.' },
-      ar: { t: 'دليل طعام مع مساعد ذكي', who: 'خدمة توصيل وترشيح مطاعم', d: 'تطبيق واحد بأربع واجهات: الزبون، الموظف، السائق، والمالك. الزبون يسأل المساعد وين ياكل، والمساعد يجاوب بنفس أسلوب فريق العلامة، وبعدها يطلب ويجمع نقاط.' } },
-    { plate: 'teeth', tags: ['Clinic system', 'Booking', 'Patient records', 'Arabic'],
+    { imgs: ['media/shelf-1.webp'], logo: 'media/logo-at.png', tags: ['Computer vision', 'AI agent', '15 branches', 'Arabic'],
+      en: { t: 'Shelf-check AI agent', who: 'Al-Attrash supermarkets · 15 branches', d: 'Staff photograph the shelves at the start of every shift. A vision model recognises each product in the photos, ticks off what it saw and lists what is missing or still unconfirmed. Missing items are hidden from the online store automatically, so customers never order what is not on the shelf.' },
+      ar: { t: 'وكيل ذكاء اصطناعي لجرد الرفوف', who: 'سوبرماركت الأطرش · ١٥ فرع', d: 'الموظف بيصوّر الرفوف ببداية كل وردية. نموذج رؤية حاسوبية بيتعرّف على كل منتج بالصور، بيعلّم الموجود وبيطلع قائمة بالناقص واللي لسا مو متأكد منه. الناقص بيختفي تلقائياً من المتجر الأونلاين، فالزبون ما بيطلب شي مش عالرف.' } },
+    { imgs: ['media/base-dash.webp', 'media/base-floor.webp', 'media/base-inventory.webp', 'media/base-bar.webp', 'media/base-reports.webp', 'media/base-shifts.webp'], logo: 'media/logo-base.png', tags: ['Point of sale', 'Stock forecast', 'Owner insights', 'Floor map', 'Co-working'],
+      en: { t: 'BASE café & spaces', who: 'Café, co-working and events · full operating system', d: 'One system for the whole place: point of sale, bar screen, live floor map, co-working passes, events, loyalty, shifts and cash. Stock is deducted by recipe with every sale and the system predicts how many days each ingredient will last. The owner dashboard turns the numbers into suggestions that make money, like filling a half-empty room in the afternoon.' },
+      ar: { t: 'BASE كافيه ومساحات', who: 'كافيه، مساحة عمل وفعاليات · نظام تشغيل كامل', d: 'نظام واحد للمكان كله: نقطة بيع، شاشة بار، خريطة صالة مباشرة، اشتراكات مساحة العمل، فعاليات، ولاء، ورديات وصندوق. المخزون بينخصم بالوصفة مع كل بيعة، والنظام بيتوقع كم يوم بيكفي كل مكوّن. لوحة المالك بتحوّل الأرقام لاقتراحات بتجيب مصاري، متل تعبئة غرفة نصها فاضي بعد الضهر.' } },
+    { imgs: ['media/r66-home.webp', 'media/r66-book.webp', 'media/r66-floor.webp', 'media/r66-reports.webp', 'media/r66-menu.webp'], phone: 'media/r66-m.webp', logo: 'media/logo-r66.png', tags: ['Fake booking detection', '3D table map', 'Table QR ordering', 'Kitchen screen', 'Reports'],
+      en: { t: 'Route 66', who: 'Café & restaurant · bookings, ordering and operations', d: 'Guests choose their exact table on a 3D map of the place and get a booking ticket. Every table has its own QR code for the menu, calling the waiter and asking for the bill. The system screens every booking and flags the ones that look fake before they block a table, and the owner sees sales, peak hours and best sellers live.' },
+      ar: { t: 'Route 66', who: 'كافيه ومطعم · حجوزات، طلبات وتشغيل', d: 'الضيف بيختار طاولته بالضبط على خريطة ثلاثية الأبعاد للمحل وبياخد تذكرة حجز. كل طاولة إلها QR خاص للمنيو ونداء الويتر وطلب الحساب. النظام بيفحص كل حجز وبيعلّم الحجوزات الوهمية قبل ما تحجز طاولة عالفاضي، والمالك بيشوف المبيعات وساعات الذروة والأكثر مبيعاً مباشرة.' } },
+    { plate: 'chat', logo: 'media/logo-mb.png', tags: ['AI assistant', 'Delivery', 'Driver app', 'Points'],
+      en: { t: 'Mr. Brand', who: 'Food guide and delivery · AI assistant', d: 'One app with four faces: customers, staff, drivers and the owner. Customers ask the assistant where to eat and it answers the way the brand’s own team does, then they order and collect points.' },
+      ar: { t: 'مستر براند', who: 'دليل أكل وتوصيل · مساعد ذكي', d: 'تطبيق واحد بأربع واجهات: الزبون، الموظف، السائق، والمالك. الزبون بيسأل المساعد وين ياكل، والمساعد بيجاوب بنفس أسلوب فريق العلامة، وبعدها بيطلب وبيجمع نقاط.' } },
+    { imgs: ['media/jh-1.webp', 'media/jh-2.webp', 'media/jh-3.webp', 'media/jh-4.webp'], url: 'https://jerseyshometown.com', logo: 'media/logo-jh.png', tags: ['E-commerce', 'Gift cards', 'WhatsApp checkout', 'Admin panel'],
+      en: { t: 'Jersey Hometowns', who: 'Basketball & football store · live', d: 'The online store for basketball and football gear: shoes, NBA and football jerseys, F1 shirts and seasonal collections. Gift cards are generated by the owner after payment, and checkout continues on WhatsApp.' },
+      ar: { t: 'Jersey Hometowns', who: 'متجر كرة سلة وقدم · شغّال', d: 'المتجر الأونلاين لمعدات كرة السلة والقدم: أحذية، قمصان NBA وكرة قدم، قمصان F1 ومجموعات موسمية. بطاقات الهدايا بيولّدها المالك بعد الدفع، والطلب بيكمل على واتساب.' } },
+    { imgs: ['media/kx-1.webp', 'media/kx-2.webp'], url: 'https://thecustomizer.net', logo: 'media/logo-kx.png', tags: ['Website', 'Gallery', 'Custom requests'],
+      en: { t: 'The Customizer', who: 'Kastinox metal studio · live', d: 'A site for a custom metalwork and furniture studio: a gallery of finished pieces, the making process, seasonal collections and a request form that turns a customer’s idea into a quote.' },
+      ar: { t: 'The Customizer', who: 'استوديو Kastinox للمعادن · شغّال', d: 'موقع لاستوديو أعمال معدنية وأثاث حسب الطلب: معرض للقطع، مراحل الشغل، مجموعات موسمية، ونموذج طلب بيحوّل فكرة الزبون لعرض سعر.' } },
+    { plate: 'teeth', logo: 'media/logo-sb.png', tags: ['Clinic system', 'Booking', 'Patient records', 'Arabic'],
       en: { t: 'Dental clinic platform', who: 'Dr. Sana Baghdadi', d: 'Booking that knows the real schedule, patient files, a tooth chart, treatment plans and payments. Separate screens for the dentist, reception and patients, all in Arabic.' },
       ar: { t: 'منصة عيادة أسنان', who: 'د. سنا بغدادي', d: 'حجز مربوط بالمواعيد الحقيقية، ملفات مرضى، مخطط أسنان، خطط علاج ومدفوعات. شاشات منفصلة للطبيبة والاستقبال والمرضى، وكلها بالعربي.' } },
-    { img: 'media/alpatra-1.webp', phone: 'media/alpatra-m.webp', tags: ['Hotel system', 'Booking', 'WhatsApp alerts', 'Two currencies'],
+    { imgs: ['media/alpatra-1.webp', 'media/alpatra-2.webp', 'media/alpatra-3.webp'], phone: 'media/alpatra-m.webp', logo: 'media/logo-ap.png', tags: ['Hotel system', 'Booking', 'WhatsApp alerts', 'Two currencies'],
       en: { t: 'Alpatra Hotel & Restaurant', who: '75-room hotel', d: 'A booking website and the full front desk behind it: live availability, a room board, a drag-and-drop booking chart, guest bills in two currencies, housekeeping and reports.' },
       ar: { t: 'فندق ومطعم البتراء', who: 'فندق من ٧٥ غرفة', d: 'موقع حجز ومعه نظام استقبال كامل: توفّر مباشر، لوحة غرف، مخطط حجوزات بالسحب والإفلات، فواتير ضيوف بعملتين، تدبير فندقي وتقارير.' } },
-    { plate: 'rooms', tags: ['Management system', 'Front desk', 'Real time'],
-      en: { t: 'Le Six Hotel & Resort', who: 'Hotel and resort', d: 'The system the front desk runs on every day. Check-in takes seconds, and every stay and payment sits in one place. Guest data stays private, so this one is drawn, not screenshotted.' },
-      ar: { t: 'Le Six Hotel & Resort', who: 'فندق ومنتجع', d: 'النظام اللي بيشتغل عليه الاستقبال كل يوم. تسجيل الدخول بثواني، وكل إقامة ودفعة بمكان واحد. بيانات الضيوف خاصة، لهيك هالمشروع مرسوم مش صورة شاشة.' } },
-    { plate: 'offer', tags: ['E-commerce', 'Owner studio', 'Live'],
+    { imgs: ['media/sa-1.webp', 'media/sa-3.webp', 'media/sa-2.webp'], url: 'https://sakkalasal.ct.ws/', logo: 'media/logo-sa.png', tags: ['Travel platform', 'Three languages', 'Bookings'],
+      en: { t: 'Sakkal & Alasal', who: 'Travel agency · platform', d: 'Flights, Hajj and Umrah, visas, trips and VIP reception in Arabic, English and Turkish. Behind the site sits an admin view with monthly bookings, revenue, completion rate and open requests, plus a board for the staff.' },
+      ar: { t: 'صقال والعسل', who: 'شركة سياحة وسفر · منصة', d: 'طيران، حج وعمرة، تأشيرات، رحلات واستقبال VIP بالعربي والإنجليزي والتركي. ورا الموقع في لوحة إدارة فيها حجوزات الشهر والإيرادات ونسبة الإتمام والطلبات المفتوحة، ولوحة للموظفين.' } },
+    { imgs: ['media/l6-1.webp'], logo: 'media/logo-l6.png', tags: ['Management system', 'Front desk', 'Live every 3 seconds', 'Payments'],
+      en: { t: 'Le Six Hotel & Resort', who: 'Hotel and resort', d: 'The system the front desk runs on every day. Check-in takes seconds, and every stay and payment sits in one place. The dashboard refreshes every few seconds; guest names are blurred here for privacy.' },
+      ar: { t: 'Le Six Hotel & Resort', who: 'فندق ومنتجع', d: 'النظام اللي بيشتغل عليه الاستقبال كل يوم. تسجيل الدخول بثواني، وكل إقامة ودفعة بمكان واحد. اللوحة بتتحدّث كل كم ثانية، وأسماء الضيوف مغبّشة هون للخصوصية.' } },
+    { imgs: ['media/bt-1.webp', 'media/bt-3.webp', 'media/bt-2.webp'], url: 'https://baraa-etaki.net', logo: 'media/logo-bt.png', tags: ['E-commerce', 'Live stock & prices', 'Owner studio', 'Arabic · English'],
       en: { t: 'BT Apple', who: 'Phone shop: buy, sell, trade, repair', d: 'A live store with real devices and prices, and a studio where the owner changes offers himself in a minute, without calling us.' },
       ar: { t: 'BT Apple', who: 'محل موبايلات: بيع، شراء، تبديل، صيانة', d: 'متجر شغّال بأجهزة وأسعار حقيقية، ومعه استوديو بيغيّر فيه صاحب المحل العروض بنفسه خلال دقيقة، بدون ما يتصل فينا.' } },
-    { img: 'media/layal-1.webp', phone: 'media/layal-m.webp', tags: ['AI concierge', 'Arabic · English · French', 'WhatsApp'],
+    { imgs: ['media/layal-1.webp'], phone: 'media/layal-m.webp', logo: 'media/logo-ly.png', tags: ['AI concierge', 'Arabic · English · French', 'WhatsApp'],
       en: { t: 'Layal, hotel concierge', who: 'Boutique hotel concept', d: 'A concierge that answers guests in three languages, takes reservations with a calendar, and sends the booking to the hotel’s WhatsApp the moment it happens.' },
-      ar: { t: 'ليال، كونسيرج فندقي', who: 'فكرة لفندق بوتيك', d: 'كونسيرج يرد على الضيوف بثلاث لغات، ياخد الحجوزات من تقويم، ويبعت الحجز على واتساب الفندق بنفس اللحظة.' } },
-    { img: 'media/potato-1.webp', phone: 'media/potato-m.webp', tags: ['Ordering', 'Arabic', 'Mobile first'],
-      en: { t: 'Amsterdam Potato', who: 'Fries shop', d: 'An ordering experience built around their signature sauces: big type, their own colours, and orders that land straight on WhatsApp.' },
-      ar: { t: 'أمستردام بطاطا', who: 'محل بطاطا', d: 'تجربة طلب مبنية حول الصلصات اللي بيشتهروا فيها: خطوط كبيرة، ألوانهم، والطلب بيوصل مباشرة على واتساب.' } },
-    { img: 'media/yamen-1.webp', phone: 'media/yamen-m.webp', tags: ['Ordering', 'Arabic'],
-      en: { t: 'Yamen Barakat', who: 'Fast-food complex', d: 'A fast Arabic ordering system in the restaurant’s own logo and colours, made to be used one-handed while hungry.' },
-      ar: { t: 'مجمع يامن بركات', who: 'مجمع وجبات سريعة', d: 'نظام طلب عربي سريع بشعار المطعم وألوانه، معمول لينستخدم بإيد وحدة وإنت جوعان.' } }
+      ar: { t: 'ليال، كونسيرج فندقي', who: 'فكرة لفندق بوتيك', d: 'كونسيرج بيرد على الضيوف بثلاث لغات، بياخد الحجوزات من تقويم، وبيبعت الحجز على واتساب الفندق بنفس اللحظة.' } }
   ];
-  var CLIENTS = { en: ['Le Six Hotel & Resort', 'Alpatra Hotel', 'BT Apple', 'Dr. Sana Baghdadi Dental', 'Amsterdam Potato', 'iBasha', 'Yamen Barakat'],
-                  ar: ['Le Six Hotel & Resort', 'فندق البتراء', 'BT Apple', 'عيادة د. سنا بغدادي', 'أمستردام بطاطا', 'iBasha', 'مجمع يامن بركات'] };
+  var CLIENTS = [
+    { logo: 'media/logo-r66.png', n: 'Route 66' }, { logo: 'media/logo-base.png', n: 'BASE' }, { logo: 'media/logo-jh.png', n: 'Jersey Hometowns' }, { logo: 'media/logo-kx.png', n: 'The Customizer' },
+    { logo: 'media/logo-l6.png', n: 'Le Six Hotel & Resort' }, { logo: 'media/logo-at.png', n: 'Al-Attrash' }, { logo: 'media/logo-ap.png', n: 'Alpatra Hotel' }, { logo: 'media/logo-bt.png', n: 'BT Apple' },
+    { logo: 'media/logo-sa.png', n: 'Sakkal & Alasal' }, { logo: 'media/logo-sb.png', n: 'Dr. Sana Baghdadi' }, { logo: 'media/logo-ib.png', n: 'iBasha' }, { logo: 'media/logo-mb.png', n: 'Mr. Brand' }
+  ];
+  var AI_BUILT = [
+    { img: 'media/shelf-app.webp', en: ['Shelf vision', 'Al-Attrash', 'Reads shelf photos, counts what is there and hides missing items from the online store.'], ar: ['رؤية الرفوف', 'الأطرش', 'بيقرأ صور الرفوف، بيعدّ الموجود وبيخفي الناقص من المتجر الأونلاين.'] },
+    { img: 'media/r66-m2.webp', en: ['Fake booking detection', 'Route 66', 'Scores every booking and flags the ones that look fake before they block a table.'], ar: ['كشف الحجوزات الوهمية', 'Route 66', 'بيقيّم كل حجز وبيعلّم الحجوزات الوهمية قبل ما تحجز طاولة عالفاضي.'] },
+    { img: 'media/base-inventory.webp', en: ['Stock forecast', 'BASE', 'Learns daily use per ingredient and warns days before anything runs out.'], ar: ['توقّع المخزون', 'BASE', 'بيتعلّم الاستهلاك اليومي لكل مكوّن وبينبّه قبل ما يخلص أي شي بأيام.'] },
+    { img: 'media/base-dash.webp', en: ['Insights that make money', 'BASE', 'Spots empty hours, expiring passes and no-shows, and says what each one costs.'], ar: ['اقتراحات بتجيب مصاري', 'BASE', 'بيلقط الساعات الفاضية والاشتراكات اللي رح تخلص والحجوزات اللي ما إجت، وبيقلك قديش كل وحدة بتكلّف.'] },
+    { img: 'media/layal-m.webp', en: ['Hotel concierge', 'Layal', 'Answers guests in Arabic, English and French and books rooms straight to WhatsApp.'], ar: ['كونسيرج فندقي', 'ليال', 'بيرد على الضيوف بالعربي والإنجليزي والفرنسي وبيحجز غرف مباشرة على واتساب.'] },
+    { img: '', en: ['Food guide assistant', 'Mr. Brand', 'Recommends places in the brand’s own voice, then takes the order.'], ar: ['مساعد دليل الأكل', 'مستر براند', 'بيرشّح أماكن بأسلوب العلامة نفسها، وبعدها بياخد الطلب.'] }
+  ];
+  var AI_NEXT = {
+    en: ['Demand and sales forecasting', 'Invoice and receipt reading', 'Footfall counting from cameras', 'Quality checks on production lines', 'Menu and price optimisation', 'WhatsApp assistants', 'Search across your own documents', 'Churn and no-show prediction'],
+    ar: ['توقّع الطلب والمبيعات', 'قراءة الفواتير والإيصالات', 'عدّ الزوار من الكاميرات', 'فحص الجودة على خطوط الإنتاج', 'تحسين المنيو والأسعار', 'مساعدين على واتساب', 'بحث ذكي بملفاتك', 'توقّع الزبائن اللي رح يبطّلوا ييجوا']
+  };
   var SERVICES = [
     { en: ['AI agents and assistants', 'Assistants trained on your menu, rooms or products. They answer customers in Arabic and English, take bookings and hand over to your staff.', 'Hotels, delivery, retail'],
       ar: ['وكلاء ومساعدين بالذكاء الاصطناعي', 'مساعدين متدربين على منيوك أو غرفك أو منتجاتك. بيردوا على الزبائن بالعربي والإنجليزي، بياخدوا حجوزات وبيحوّلوا لموظفينك.', 'فنادق، توصيل، محلات'] },
@@ -84,7 +108,8 @@
       'gaze.track': 'following you', 'gaze.scan': 'looking around', 'notice': 'hello. I see you.',
       'clients.label': 'Running on Solunera',
       'work.title': 'Systems that open every morning with the business.',
-      'work.sub': 'Drag or use the arrows. Some clients keep their systems private, so those are drawn instead of screenshotted.',
+      'work.sub': 'Real screens from real systems. Drag or use the arrows. Where a client keeps the system private, we drew it instead.',
+      'nav.ai': 'AI', 'ai.title': 'AI already running inside real businesses.', 'ai.sub': 'Vision, forecasting and assistants we built and put to work. Every one started as a problem an owner told us about.', 'ai.next': 'Next on our bench', 'ai.next.sub': 'Ready to build on your data.',
       'build.title': 'What we build.', 'build.sub': 'One team for the whole digital side of a business, from the first website to the AI that counts your stock.',
       'story.title': 'How it started.',
       'story.p1': 'Solunera started in 2023 with one person. Kamel Nassif was studying computer science and had spent years in graphic design and print production. The shops around him needed websites, so he built them.',
@@ -108,7 +133,8 @@
       'gaze.track': 'عم يلحقك', 'gaze.scan': 'عم يتطلّع حواليه', 'notice': 'أهلا. شايفك.',
       'clients.label': 'شغّالين على سولونيرا',
       'work.title': 'أنظمة بتفتح كل صباح مع الشغل.',
-      'work.sub': 'اسحب أو استعمل الأسهم. في عملاء بيحبّوا يخلّوا أنظمتهم خاصة، فرسمناها بدل صور الشاشة.',
+      'work.sub': 'شاشات حقيقية من أنظمة حقيقية. اسحب أو استعمل الأسهم. وين العميل بيحب يخلّي نظامه خاص، رسمناه بدل الصورة.',
+      'nav.ai': 'الذكاء الاصطناعي', 'ai.title': 'ذكاء اصطناعي شغّال جوّا بزنسات حقيقية.', 'ai.sub': 'رؤية حاسوبية، توقّعات ومساعدين بنيناهم وشغّلناهم. كل واحد بلّش من مشكلة حكالنا عنها صاحب شغل.', 'ai.next': 'الجاي على طاولتنا', 'ai.next.sub': 'جاهزين نبنيه على بياناتك.',
       'build.title': 'شو منبني.', 'build.sub': 'فريق واحد لكل الجانب الرقمي من شغلك، من أول موقع لحد الذكاء الاصطناعي اللي بيعدّ بضاعتك.',
       'story.title': 'كيف بلّشنا.',
       'story.p1': 'سولونيرا بلّشت سنة ٢٠٢٣ بشخص واحد. كامل ناصيف كان عم يدرس علوم الحاسوب، وقضّى سنين بالتصميم الجرافيكي والطباعة. المحلات اللي حواليه كانت بحاجة مواقع، فعملها.',
@@ -136,8 +162,13 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   /* ======================= PLATES ======================= */
-  function plate(kind) {
+  function plate(kind, p) {
     var ar = lang === 'ar';
+    if (kind === 'site' && p && p.site) {
+      var st = p.site;
+      return '<div class="plate site"><div class="bar"><i></i><i></i><i></i><span>' + esc(st.domain) + '</span></div><div class="sitebody"><b>' + esc(st.title) + '</b><ul>' +
+        st.rows.map(function (r) { return '<li><span>' + esc(r[0]) + '</span><em>' + esc(r[1]) + '</em></li>'; }).join('') + '</ul></div></div>';
+    }
     if (kind === 'shelf') {
       var colors = ['#C8102E', '#D9A441', '#5B3A29', '#7A2E8C', '#2F6F4F', '#E8E2D7', '#B3541E', '#1F4E8C'];
       var labels = ['kitkat .97', 'snickers .95', 'galaxy .93', 'milky way .91'];
@@ -198,19 +229,32 @@
     $('#lang').textContent = t('lang');
     $('#lang').setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
 
-    var names = CLIENTS[lang], track = names.concat(names).map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('');
+    var track = CLIENTS.map(function (c) { return c.wide ? '<span class="cl wide"><img src="' + c.logo + '" alt="' + esc(c.n) + '"></span>' : '<span class="cl">' + (c.logo ? '<img src="' + c.logo + '" alt="" width="34" height="34">' : '') + esc(c.n) + '</span>'; }).join('');
     $('#marquee').innerHTML = track + track;
 
     $('#slider').innerHTML = PROJECTS.map(function (p, i) {
-      var c = p[lang];
-      var media = p.img
-        ? '<img src="' + p.img + '" alt="' + esc(c.t) + '" loading="lazy" draggable="false">' + (p.phone ? '<img class="phone" src="' + p.phone + '" alt="" loading="lazy" draggable="false">' : '')
-        : plate(p.plate);
+      var c = p[lang], media;
+      if (p.imgs) {
+        media = p.imgs.map(function (src, k) { return '<figure class="g' + (k ? '' : ' on') + '"><img src="' + src + '" alt="' + esc(c.t) + '" loading="lazy" draggable="false"></figure>'; }).join('') +
+          (p.phone ? '<img class="phone" src="' + p.phone + '" alt="" loading="lazy" draggable="false">' : '') +
+          (p.imgs.length > 1 ? '<div class="gdots">' + p.imgs.map(function (_, k) { return '<button type="button" data-g="' + k + '"' + (k ? '' : ' aria-current="true"') + ' aria-label="' + (k + 1) + '"></button>'; }).join('') + '</div>' : '');
+      } else media = plate(p.plate, p);
+      var brand = p.logo ? '<img src="' + p.logo + '" alt="">' : '<b>' + esc(p.mono || '') + '</b>';
+      var wideLogo = false;
       return '<article class="slide" aria-roledescription="slide" aria-label="' + (i + 1) + ' / ' + PROJECTS.length + '">' +
         '<div class="media">' + media + '</div>' +
-        '<div class="info"><span class="idx mono">' + pad(i + 1) + '</span><h3>' + esc(c.t) + '</h3><span class="who mono">' + esc(c.who) + '</span><p>' + esc(c.d) + '</p>' +
+        '<div class="info"><div class="brandrow"><span class="brand' + (wideLogo ? ' wide' : '') + (p.light ? ' light' : '') + '">' + brand + '</span><span class="idx mono">' + pad(i + 1) + '</span>' +
+        (p.url ? '<a class="visit mono" href="' + p.url + '" target="_blank" rel="noopener">' + esc(p.url.replace(/^https?:\/\//, '').replace(/\/$/, '')) + ' ↗</a>' : '') + '</div>' +
+        '<h3>' + esc(c.t) + '</h3><span class="who mono">' + esc(c.who) + '</span><p>' + esc(c.d) + '</p>' +
         '<div class="tags">' + p.tags.map(function (g) { return '<span>' + esc(g) + '</span>'; }).join('') + '</div></div></article>';
     }).join('');
+
+    $('#ai-built').innerHTML = AI_BUILT.map(function (a) {
+      var c = a[lang];
+      return '<article class="ai-card">' + (a.img ? '<div class="ai-img"><img src="' + a.img + '" alt="" loading="lazy"></div>' : '<div class="ai-img ai-chat">' + plate('chat') + '</div>') +
+        '<div class="ai-txt"><span class="mono">' + esc(c[1]) + '</span><h3>' + esc(c[0]) + '</h3><p>' + esc(c[2]) + '</p></div></article>';
+    }).join('');
+    $('#ai-next').innerHTML = AI_NEXT[lang].map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('');
 
     $('#svc').innerHTML = SERVICES.map(function (s) { var c = s[lang]; return '<div class="svc-row"><h3>' + esc(c[0]) + '</h3><p>' + esc(c[1]) + '</p><span class="ex mono">' + esc(c[2]) + '</span></div>'; }).join('');
     $('#stages').innerHTML = STAGES.map(function (s) { var c = s[lang]; var y = s.y === 'now' ? (lang === 'ar' ? 'اليوم' : 'today') : s.y; return '<div class="stage-s"><span class="y mono">' + (y || '&nbsp;') + '</span><h3>' + esc(c[0]) + '</h3><p>' + esc(c[1]) + '</p></div>'; }).join('');
@@ -262,6 +306,22 @@
       if (moved) { var keep = slider.scrollLeft; slider.classList.remove('drag'); slider.scrollLeft = keep; var i = current(); slides()[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }); }
     });
   })();
+
+  /* ======================= GALLERIES ======================= */
+  function showG(media, k) {
+    var imgs = media.querySelectorAll('.g'), dots = media.querySelectorAll('.gdots button');
+    if (!imgs.length) return; k = (k + imgs.length) % imgs.length;
+    imgs.forEach(function (im, j) { im.classList.toggle('on', j === k); });
+    dots.forEach(function (d, j) { if (j === k) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+    media.dataset.k = k;
+  }
+  slider.addEventListener('click', function (e) { var d = e.target.closest('.gdots button'); if (d) { e.stopPropagation(); var m = d.closest('.media'); m.dataset.hold = Date.now(); showG(m, +d.dataset.g); } });
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(function () {
+    var cur = slides()[current()]; if (!cur) return;
+    var m = cur.querySelector('.media'); if (!m || m.querySelectorAll('.g').length < 2) return;
+    if (m.dataset.hold && Date.now() - m.dataset.hold < 8000) return;
+    showG(m, (+m.dataset.k || 0) + 1);
+  }, 3200);
 
   /* ======================= HUD THOUGHTS ======================= */
   var ti = 0, thought = $('[data-hud="thought"]'), noticeUntil = 0;
