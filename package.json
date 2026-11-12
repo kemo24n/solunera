@@ -1,10 +1,10 @@
 {
-  "name": "solunera-hq",
-  "version": "1.0.0",
-  "description": "Solunera — public studio website + private HQ (sales pipeline, clients, projects, billing, vault)",
+  "name": "solunera",
+  "version": "2.0.0",
+  "description": "Solunera: public website + private HQ (field visits, demos, quotes, tasks)",
   "main": "server.js",
   "scripts": { "start": "node server.js", "demo": "DATA_DIR=./data-demo node server.js --demo" },
   "engines": { "node": ">=18" },
-  "author": "Solunera — Kamel Nassif",
+  "author": "Solunera, Kamel Nassif",
   "private": true
 }

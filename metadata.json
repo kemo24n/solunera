@@ -1,6 +1,0 @@
-{
-  "name": "Solunera",
-  "description": "Premium cinematic homepage for Solunera - next-generation AI systems, automation, and custom software.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
